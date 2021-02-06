@@ -310,3 +310,137 @@ Processing by PostsController#show as HTML
 Completed 200 OK in 38ms (Views: 21.6ms | ActiveRecord: 4.3ms | Allocations: 5552)
 
 
+Started GET "/posts/1" for ::1 at 2021-02-06 16:09:27 +0530
+Processing by PostsController#show as HTML
+  Parameters: {"id"=>"1"}
+  [1m[36mPost Load (0.9ms)[0m  [1m[34mSELECT "posts".* FROM "posts" WHERE "posts"."id" = $1 LIMIT $2[0m  [["id", 1], ["LIMIT", 1]]
+  ↳ app/controllers/posts_controller.rb:28:in `show'
+  Rendering layout layouts/application.html.erb
+  Rendering posts/show.html.erb within layouts/application
+  Rendered posts/show.html.erb within layouts/application (Duration: 1.5ms | Allocations: 155)
+[Webpacker] Everything's up-to-date. Nothing to do
+  Rendered layout layouts/application.html.erb (Duration: 14.8ms | Allocations: 3608)
+Completed 200 OK in 63ms (Views: 18.6ms | ActiveRecord: 24.0ms | Allocations: 8667)
+
+
+Started GET "/" for ::1 at 2021-02-06 16:09:31 +0530
+Processing by PostsController#index as HTML
+  Rendering layout layouts/application.html.erb
+  Rendering posts/index.html.erb within layouts/application
+  Rendered posts/index.html.erb within layouts/application (Duration: 1.8ms | Allocations: 1634)
+  Rendered layout layouts/application.html.erb (Duration: 5.8ms | Allocations: 1702)
+Completed 500 Internal Server Error in 7ms (ActiveRecord: 0.0ms | Allocations: 2233)
+
+
+
+NoMethodError - undefined method `each' for nil:NilClass:
+  app/views/posts/index.html.erb:6
+
+Started POST "/__better_errors/2febf7efbed4e661/variables" for ::1 at 2021-02-06 16:09:31 +0530
+Started GET "/" for ::1 at 2021-02-06 16:10:23 +0530
+Processing by PostsController#index as HTML
+  Rendering layout layouts/application.html.erb
+  Rendering posts/index.html.erb within layouts/application
+  Rendered posts/index.html.erb within layouts/application (Duration: 2.4ms | Allocations: 1604)
+  Rendered layout layouts/application.html.erb (Duration: 2.9ms | Allocations: 1673)
+Completed 500 Internal Server Error in 8ms (ActiveRecord: 0.0ms | Allocations: 2840)
+
+
+
+NoMethodError - undefined method `each' for nil:NilClass:
+  app/views/posts/index.html.erb:6
+
+Started POST "/__better_errors/333230ab38309104/variables" for ::1 at 2021-02-06 16:10:23 +0530
+Started GET "/" for ::1 at 2021-02-06 16:10:34 +0530
+Processing by PostsController#index as HTML
+  Rendering layout layouts/application.html.erb
+  Rendering posts/index.html.erb within layouts/application
+  Rendered posts/index.html.erb within layouts/application (Duration: 1.3ms | Allocations: 1604)
+  Rendered layout layouts/application.html.erb (Duration: 1.5ms | Allocations: 1673)
+Completed 500 Internal Server Error in 4ms (ActiveRecord: 0.0ms | Allocations: 2840)
+
+
+
+NoMethodError - undefined method `each' for nil:NilClass:
+  app/views/posts/index.html.erb:6
+
+Started POST "/__better_errors/9795021fc10ffe3d/variables" for ::1 at 2021-02-06 16:10:34 +0530
+Started GET "/" for ::1 at 2021-02-06 16:11:35 +0530
+Processing by PostsController#index as HTML
+  Rendering layout layouts/application.html.erb
+  Rendering posts/index.html.erb within layouts/application
+  [1m[36mPost Load (4.5ms)[0m  [1m[34mSELECT "posts".* FROM "posts"[0m
+  ↳ app/views/posts/index.html.erb:6
+  Rendered posts/index.html.erb within layouts/application (Duration: 90.8ms | Allocations: 7278)
+  Rendered layout layouts/application.html.erb (Duration: 91.3ms | Allocations: 7347)
+Completed 500 Internal Server Error in 104ms (ActiveRecord: 31.9ms | Allocations: 8972)
+
+
+
+NoMethodError - undefined method `comments' for #<Post id: 1, title: "King", content: "King ", created_at: "2021-02-06 10:30:17.853721000 +0000", updated_at: "2021-02-06 10:30:17.853721000 +0000">
+Did you mean?  committed!:
+  app/views/posts/index.html.erb:18
+  app/views/posts/index.html.erb:6
+
+Started POST "/__better_errors/b0f049c68bb53b25/variables" for ::1 at 2021-02-06 16:11:36 +0530
+Started GET "/" for ::1 at 2021-02-06 16:11:51 +0530
+Processing by PostsController#index as HTML
+  Rendering layout layouts/application.html.erb
+  Rendering posts/index.html.erb within layouts/application
+  [1m[36mPost Load (2.3ms)[0m  [1m[34mSELECT "posts".* FROM "posts"[0m
+  ↳ app/views/posts/index.html.erb:6
+  Rendered posts/index.html.erb within layouts/application (Duration: 23.1ms | Allocations: 3967)
+  Rendered layout layouts/application.html.erb (Duration: 23.5ms | Allocations: 4036)
+Completed 500 Internal Server Error in 30ms (ActiveRecord: 2.3ms | Allocations: 5212)
+
+
+
+NoMethodError - undefined method `comments' for #<Post id: 1, title: "King", content: "King ", created_at: "2021-02-06 10:30:17.853721000 +0000", updated_at: "2021-02-06 10:30:17.853721000 +0000">
+Did you mean?  committed!:
+  app/views/posts/index.html.erb:18
+  app/views/posts/index.html.erb:6
+
+Started POST "/__better_errors/811e5f93a8bb4c0e/variables" for ::1 at 2021-02-06 16:11:51 +0530
+Started GET "/" for ::1 at 2021-02-06 16:12:34 +0530
+Processing by PostsController#index as HTML
+  Rendering layout layouts/application.html.erb
+  Rendering posts/index.html.erb within layouts/application
+  [1m[36mPost Load (5.1ms)[0m  [1m[34mSELECT "posts".* FROM "posts"[0m
+  ↳ app/views/posts/index.html.erb:6
+  Rendered posts/index.html.erb within layouts/application (Duration: 32.1ms | Allocations: 3970)
+  Rendered layout layouts/application.html.erb (Duration: 32.6ms | Allocations: 4039)
+Completed 500 Internal Server Error in 40ms (ActiveRecord: 5.1ms | Allocations: 5219)
+
+
+
+NoMethodError - undefined method `comments' for #<Post id: 1, title: "King", content: "King ", created_at: "2021-02-06 10:30:17.853721000 +0000", updated_at: "2021-02-06 10:30:17.853721000 +0000">
+Did you mean?  committed!:
+  app/views/posts/index.html.erb:18
+  app/views/posts/index.html.erb:6
+
+Started POST "/__better_errors/089aa6ac084a44f9/variables" for ::1 at 2021-02-06 16:12:34 +0530
+Started GET "/" for ::1 at 2021-02-06 16:13:33 +0530
+Processing by PostsController#index as HTML
+  Rendering layout layouts/application.html.erb
+  Rendering posts/index.html.erb within layouts/application
+  [1m[36mPost Load (2.6ms)[0m  [1m[34mSELECT "posts".* FROM "posts"[0m
+  ↳ app/views/posts/index.html.erb:6
+  Rendered posts/index.html.erb within layouts/application (Duration: 12.1ms | Allocations: 1113)
+[Webpacker] Everything's up-to-date. Nothing to do
+  Rendered layout layouts/application.html.erb (Duration: 27.3ms | Allocations: 4580)
+Completed 200 OK in 39ms (Views: 34.1ms | ActiveRecord: 2.6ms | Allocations: 5796)
+
+
+Started GET "/posts/1" for ::1 at 2021-02-06 16:14:35 +0530
+Processing by PostsController#show as HTML
+  Parameters: {"id"=>"1"}
+  [1m[36mPost Load (0.9ms)[0m  [1m[34mSELECT "posts".* FROM "posts" WHERE "posts"."id" = $1 LIMIT $2[0m  [["id", 1], ["LIMIT", 1]]
+  ↳ app/controllers/posts_controller.rb:29:in `show'
+  Rendering layout layouts/application.html.erb
+  Rendering posts/show.html.erb within layouts/application
+  Rendered posts/show.html.erb within layouts/application (Duration: 0.6ms | Allocations: 151)
+[Webpacker] Everything's up-to-date. Nothing to do
+  Rendered layout layouts/application.html.erb (Duration: 12.0ms | Allocations: 3813)
+Completed 200 OK in 18ms (Views: 13.5ms | ActiveRecord: 0.9ms | Allocations: 5226)
+
+
