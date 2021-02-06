@@ -444,3 +444,52 @@ Processing by PostsController#show as HTML
 Completed 200 OK in 18ms (Views: 13.5ms | ActiveRecord: 0.9ms | Allocations: 5226)
 
 
+Started GET "/" for ::1 at 2021-02-06 16:26:00 +0530
+Processing by PostsController#index as HTML
+  Rendering layout layouts/application.html.erb
+  Rendering posts/index.html.erb within layouts/application
+  [1m[36mPost Load (2.5ms)[0m  [1m[34mSELECT "posts".* FROM "posts"[0m
+  ↳ app/views/posts/index.html.erb:6
+  Rendered posts/index.html.erb within layouts/application (Duration: 53.8ms | Allocations: 4409)
+[Webpacker] Everything's up-to-date. Nothing to do
+  Rendered layout layouts/application.html.erb (Duration: 62.5ms | Allocations: 8024)
+Completed 200 OK in 71ms (Views: 67.9ms | ActiveRecord: 29.4ms | Allocations: 9239)
+
+
+Started GET "/" for ::1 at 2021-02-06 16:26:31 +0530
+Processing by PostsController#index as HTML
+  Rendering layout layouts/application.html.erb
+  Rendering posts/index.html.erb within layouts/application
+  [1m[36mPost Load (3.4ms)[0m  [1m[34mSELECT "posts".* FROM "posts"[0m
+  ↳ app/views/posts/index.html.erb:6
+  Rendered posts/index.html.erb within layouts/application (Duration: 8.2ms | Allocations: 1110)
+[Webpacker] Everything's up-to-date. Nothing to do
+  Rendered layout layouts/application.html.erb (Duration: 25.0ms | Allocations: 4699)
+Completed 200 OK in 29ms (Views: 23.9ms | ActiveRecord: 3.4ms | Allocations: 5911)
+
+
+Started GET "/" for ::1 at 2021-02-06 16:27:26 +0530
+Processing by PostsController#index as HTML
+  Rendering layout layouts/application.html.erb
+  Rendering posts/index.html.erb within layouts/application
+  [1m[36mPost Load (0.9ms)[0m  [1m[34mSELECT "posts".* FROM "posts"[0m
+  ↳ app/views/posts/index.html.erb:6
+  Rendered posts/index.html.erb within layouts/application (Duration: 3.0ms | Allocations: 928)
+[Webpacker] Everything's up-to-date. Nothing to do
+  Rendered layout layouts/application.html.erb (Duration: 12.9ms | Allocations: 4209)
+Completed 200 OK in 16ms (Views: 13.5ms | ActiveRecord: 0.9ms | Allocations: 4663)
+
+
+Started GET "/posts/1" for ::1 at 2021-02-06 16:27:28 +0530
+Processing by PostsController#show as HTML
+  Parameters: {"id"=>"1"}
+  [1m[36mPost Load (1.6ms)[0m  [1m[34mSELECT "posts".* FROM "posts" WHERE "posts"."id" = $1 LIMIT $2[0m  [["id", 1], ["LIMIT", 1]]
+  ↳ app/controllers/posts_controller.rb:29:in `show'
+  Rendering layout layouts/application.html.erb
+  Rendering posts/show.html.erb within layouts/application
+  Rendered posts/show.html.erb within layouts/application (Duration: 0.5ms | Allocations: 152)
+[Webpacker] Everything's up-to-date. Nothing to do
+  Rendered layout layouts/application.html.erb (Duration: 16.4ms | Allocations: 4005)
+Completed 200 OK in 26ms (Views: 17.2ms | ActiveRecord: 2.7ms | Allocations: 5446)
+
+
