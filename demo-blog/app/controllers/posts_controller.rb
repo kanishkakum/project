@@ -22,7 +22,12 @@ class PostsController < ApplicationController
   end
 
   def update
-
+    @post = Post.find(params[:id])
+    if @post.update(posts_params)
+      redirect_to @post
+    else
+      render 'edit'  
+    end  
   end
 
   def show 
@@ -30,7 +35,7 @@ class PostsController < ApplicationController
   end  
 
   def edit
-
+    @post = Post.find(params[:id])
   end
 
   def destroy
