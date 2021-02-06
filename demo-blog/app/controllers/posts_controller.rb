@@ -13,7 +13,7 @@ class PostsController < ApplicationController
 
   def create
     @post = Post.new(posts_params)
-    if post.save
+    if @post.save
       redirect_to @post , message: "Post was created successfully"
     else
       render 'new'
@@ -23,6 +23,10 @@ class PostsController < ApplicationController
   def update
 
   end
+
+  def show 
+    @post = Post.find(params[:id])
+  end  
 
   def edit
 
@@ -35,7 +39,7 @@ class PostsController < ApplicationController
   private
 
   def posts_params
-  	params.require(:posts).permit(:title, :content)
+  	params.require(:post).permit(:title, :content)
   end	
 
 end

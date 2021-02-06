@@ -227,3 +227,86 @@ Processing by PostsController#new as HTML
 Completed 200 OK in 25ms (Views: 22.9ms | Allocations: 10157)
 
 
+Started POST "/posts" for ::1 at 2021-02-06 15:58:18 +0530
+Processing by PostsController#create as HTML
+  Parameters: {"authenticity_token"=>"[FILTERED]", "post"=>{"title"=>"King", "content"=>"King "}, "commit"=>"Create new post"}
+Completed 400 Bad Request in 2ms (Allocations: 755)
+
+
+
+ActionController::ParameterMissing - param is missing or the value is empty: posts
+Did you mean?  post
+               commit
+               controller
+               action:
+  app/controllers/posts_controller.rb:38:in `posts_params'
+  app/controllers/posts_controller.rb:15:in `create'
+
+Started POST "/__better_errors/73613226d80a836d/variables" for ::1 at 2021-02-06 15:58:19 +0530
+Started POST "/posts" for ::1 at 2021-02-06 15:59:20 +0530
+Processing by PostsController#create as HTML
+  Parameters: {"authenticity_token"=>"[FILTERED]", "post"=>{"title"=>"King", "content"=>"King "}, "commit"=>"Create new post"}
+Completed 500 Internal Server Error in 88ms (ActiveRecord: 28.8ms | Allocations: 8953)
+
+
+
+NameError - undefined local variable or method `post' for #<PostsController:0x00000000009dd0>
+Did you mean?  @post:
+  app/controllers/posts_controller.rb:16:in `create'
+
+Started POST "/__better_errors/f8a44e3eb7942575/variables" for ::1 at 2021-02-06 15:59:21 +0530
+Started POST "/posts" for ::1 at 2021-02-06 15:59:55 +0530
+Processing by PostsController#create as HTML
+  Parameters: {"authenticity_token"=>"[FILTERED]", "post"=>{"title"=>"King", "content"=>"King "}, "commit"=>"Create new post"}
+Completed 500 Internal Server Error in 54ms (ActiveRecord: 21.3ms | Allocations: 4507)
+
+
+
+NoMethodError - undefined method `save' for nil:NilClass:
+  app/controllers/posts_controller.rb:16:in `create'
+
+Started POST "/__better_errors/758488239d514954/variables" for ::1 at 2021-02-06 15:59:55 +0530
+Started POST "/posts" for ::1 at 2021-02-06 16:00:17 +0530
+Processing by PostsController#create as HTML
+  Parameters: {"authenticity_token"=>"[FILTERED]", "post"=>{"title"=>"King", "content"=>"King "}, "commit"=>"Create new post"}
+  [1m[36mTRANSACTION (4.7ms)[0m  [1m[35mBEGIN[0m
+  ↳ app/controllers/posts_controller.rb:16:in `create'
+  [1m[36mPost Create (10.0ms)[0m  [1m[32mINSERT INTO "posts" ("title", "content", "created_at", "updated_at") VALUES ($1, $2, $3, $4) RETURNING "id"[0m  [["title", "King"], ["content", "King "], ["created_at", "2021-02-06 10:30:17.853721"], ["updated_at", "2021-02-06 10:30:17.853721"]]
+  ↳ app/controllers/posts_controller.rb:16:in `create'
+  [1m[36mTRANSACTION (12.0ms)[0m  [1m[35mCOMMIT[0m
+  ↳ app/controllers/posts_controller.rb:16:in `create'
+Redirected to http://localhost:3000/posts/1
+Completed 302 Found in 86ms (ActiveRecord: 42.9ms | Allocations: 6395)
+
+
+Started GET "/posts/1" for ::1 at 2021-02-06 16:00:17 +0530
+Processing by PostsController#show as HTML
+  Parameters: {"id"=>"1"}
+  [1m[36mPost Load (2.6ms)[0m  [1m[34mSELECT "posts".* FROM "posts" WHERE "posts"."id" = $1 LIMIT $2[0m  [["id", 1], ["LIMIT", 1]]
+  ↳ app/controllers/posts_controller.rb:28:in `show'
+  Rendering layout layouts/application.html.erb
+  Rendering posts/show.html.erb within layouts/application
+  Rendered posts/show.html.erb within layouts/application (Duration: 37.6ms | Allocations: 4594)
+  Rendered layout layouts/application.html.erb (Duration: 38.8ms | Allocations: 4663)
+Completed 500 Internal Server Error in 65ms (ActiveRecord: 5.0ms | Allocations: 7400)
+
+
+
+NameError - undefined local variable or method `post' for #<ActionView::Base:0x0000000000c170>
+Did you mean?  @post:
+  app/views/posts/show.html.erb:6
+
+Started POST "/__better_errors/97529a0ca8a4fa7f/variables" for ::1 at 2021-02-06 16:00:18 +0530
+Started GET "/posts/1" for ::1 at 2021-02-06 16:00:36 +0530
+Processing by PostsController#show as HTML
+  Parameters: {"id"=>"1"}
+  [1m[36mPost Load (4.3ms)[0m  [1m[34mSELECT "posts".* FROM "posts" WHERE "posts"."id" = $1 LIMIT $2[0m  [["id", 1], ["LIMIT", 1]]
+  ↳ app/controllers/posts_controller.rb:28:in `show'
+  Rendering layout layouts/application.html.erb
+  Rendering posts/show.html.erb within layouts/application
+  Rendered posts/show.html.erb within layouts/application (Duration: 0.9ms | Allocations: 167)
+[Webpacker] Everything's up-to-date. Nothing to do
+  Rendered layout layouts/application.html.erb (Duration: 16.8ms | Allocations: 3638)
+Completed 200 OK in 38ms (Views: 21.6ms | ActiveRecord: 4.3ms | Allocations: 5552)
+
+
