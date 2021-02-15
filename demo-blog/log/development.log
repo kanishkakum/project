@@ -573,3 +573,100 @@ Processing by PostsController#show as HTML
 Completed 200 OK in 21ms (Views: 13.5ms | ActiveRecord: 2.4ms | Allocations: 5581)
 
 
+Started GET "/" for ::1 at 2021-02-06 16:40:14 +0530
+Processing by PostsController#index as HTML
+  Rendering layout layouts/application.html.erb
+  Rendering posts/index.html.erb within layouts/application
+  [1m[36mPost Load (0.8ms)[0m  [1m[34mSELECT "posts".* FROM "posts"[0m
+  ↳ app/views/posts/index.html.erb:6
+  Rendered posts/index.html.erb within layouts/application (Duration: 3.2ms | Allocations: 1111)
+  Rendered layout layouts/application.html.erb (Duration: 31.9ms | Allocations: 9408)
+Completed 500 Internal Server Error in 36ms (ActiveRecord: 0.8ms | Allocations: 10594)
+
+
+
+Sprockets::Rails::Helper::AssetNotFound - The asset "application.js" is not present in the asset pipeline.:
+  app/views/layouts/application.html.erb:8
+
+Started POST "/__better_errors/4084ffd7ee24eb57/variables" for ::1 at 2021-02-06 16:40:14 +0530
+Started GET "/" for ::1 at 2021-02-06 16:40:34 +0530
+Processing by PostsController#index as HTML
+  Rendering layout layouts/application.html.erb
+  Rendering posts/index.html.erb within layouts/application
+  [1m[36mPost Load (1.9ms)[0m  [1m[34mSELECT "posts".* FROM "posts"[0m
+  ↳ app/views/posts/index.html.erb:6
+  Rendered posts/index.html.erb within layouts/application (Duration: 10.9ms | Allocations: 928)
+  Rendered layout layouts/application.html.erb (Duration: 22.0ms | Allocations: 8910)
+Completed 500 Internal Server Error in 25ms (ActiveRecord: 1.9ms | Allocations: 9327)
+
+
+
+Sprockets::Rails::Helper::AssetNotFound - The asset "application.js" is not present in the asset pipeline.:
+  app/views/layouts/application.html.erb:8
+
+Started POST "/__better_errors/2677b6902e6ceb8d/variables" for ::1 at 2021-02-06 16:40:34 +0530
+Started GET "/" for ::1 at 2021-02-06 16:40:47 +0530
+Processing by PostsController#index as HTML
+  Rendering layout layouts/application.html.erb
+  Rendering posts/index.html.erb within layouts/application
+  [1m[36mPost Load (5.5ms)[0m  [1m[34mSELECT "posts".* FROM "posts"[0m
+  ↳ app/views/posts/index.html.erb:6
+  Rendered posts/index.html.erb within layouts/application (Duration: 14.2ms | Allocations: 1113)
+[Webpacker] Everything's up-to-date. Nothing to do
+  Rendered layout layouts/application.html.erb (Duration: 27.8ms | Allocations: 4720)
+Completed 200 OK in 36ms (Views: 28.4ms | ActiveRecord: 5.5ms | Allocations: 5935)
+
+
+Started GET "/" for ::1 at 2021-02-06 16:42:51 +0530
+Processing by PostsController#index as HTML
+  Rendering layout layouts/application.html.erb
+  Rendering posts/index.html.erb within layouts/application
+  [1m[36mPost Load (5.0ms)[0m  [1m[34mSELECT "posts".* FROM "posts"[0m
+  ↳ app/views/posts/index.html.erb:6
+  Rendered posts/index.html.erb within layouts/application (Duration: 14.3ms | Allocations: 1108)
+[Webpacker] Everything's up-to-date. Nothing to do
+  Rendered layout layouts/application.html.erb (Duration: 33.3ms | Allocations: 4698)
+Completed 200 OK in 38ms (Views: 31.8ms | ActiveRecord: 5.0ms | Allocations: 5911)
+
+
+Started GET "/posts/1" for ::1 at 2021-02-06 16:42:53 +0530
+Processing by PostsController#show as HTML
+  Parameters: {"id"=>"1"}
+  [1m[36mPost Load (1.3ms)[0m  [1m[34mSELECT "posts".* FROM "posts" WHERE "posts"."id" = $1 LIMIT $2[0m  [["id", 1], ["LIMIT", 1]]
+  ↳ app/controllers/posts_controller.rb:34:in `show'
+  Rendering layout layouts/application.html.erb
+  Rendering posts/show.html.erb within layouts/application
+  Rendered posts/show.html.erb within layouts/application (Duration: 1.6ms | Allocations: 288)
+[Webpacker] Everything's up-to-date. Nothing to do
+  Rendered layout layouts/application.html.erb (Duration: 26.4ms | Allocations: 4122)
+Completed 200 OK in 36ms (Views: 28.3ms | ActiveRecord: 1.3ms | Allocations: 5395)
+
+
+Started GET "/posts/1/edit" for ::1 at 2021-02-06 16:42:55 +0530
+Processing by PostsController#edit as HTML
+  Parameters: {"id"=>"1"}
+  [1m[36mPost Load (1.5ms)[0m  [1m[34mSELECT "posts".* FROM "posts" WHERE "posts"."id" = $1 LIMIT $2[0m  [["id", 1], ["LIMIT", 1]]
+  ↳ app/controllers/posts_controller.rb:38:in `edit'
+  Rendering layout layouts/application.html.erb
+  Rendering posts/edit.html.erb within layouts/application
+  Rendered posts/_form.html.erb (Duration: 20.6ms | Allocations: 5783)
+  Rendered posts/edit.html.erb within layouts/application (Duration: 22.1ms | Allocations: 6124)
+[Webpacker] Everything's up-to-date. Nothing to do
+  Rendered layout layouts/application.html.erb (Duration: 33.3ms | Allocations: 9814)
+Completed 200 OK in 40ms (Views: 34.4ms | ActiveRecord: 1.5ms | Allocations: 11086)
+
+
+Started DELETE "/posts/1" for ::1 at 2021-02-06 16:43:01 +0530
+Processing by PostsController#destroy as HTML
+  Parameters: {"authenticity_token"=>"[FILTERED]", "id"=>"1"}
+No template found for PostsController#destroy, rendering head :no_content
+Completed 204 No Content in 8ms (ActiveRecord: 0.0ms | Allocations: 1567)
+
+
+Started DELETE "/posts/1" for ::1 at 2021-02-06 16:43:06 +0530
+Processing by PostsController#destroy as HTML
+  Parameters: {"authenticity_token"=>"[FILTERED]", "id"=>"1"}
+No template found for PostsController#destroy, rendering head :no_content
+Completed 204 No Content in 4ms (ActiveRecord: 0.0ms | Allocations: 326)
+
+
